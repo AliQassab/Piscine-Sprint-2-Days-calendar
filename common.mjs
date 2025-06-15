@@ -1,6 +1,5 @@
 // This is a placeholder file which shows how you can define functions which can be used from both a browser script and a node script. You can delete the contents of the file once you have understood how it works.
 // Function to calculate the correct date for a special day based on its occurrence pattern
-// common.mjs
 
 export function calculateSpecialDay(year, month, specialDay) {
   const monthIndex = new Date(`${specialDay.monthName} 1, ${year}`).getMonth();
