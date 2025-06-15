@@ -2,30 +2,25 @@
 // It can be loaded into index.html.
 // Note that when running locally, in order to open a web page which uses modules, you must serve the directory over HTTP e.g. with https://www.npmjs.com/package/http-server
 // You can't open the index.html file using a file:// URL.
-
+import { calculateSpecialDay } from "./common.mjs";
 import daysData from "./days.json" with { type: "json" };
 
 const monthNames = [
-    "January", "February", "March", "April", "May", "June", 
+    "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
 ];
 
-// State to keep track of the current month and year
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 
-// Function to create the calendar grid
 function createCalendarGrid(year, month) {
-    // Get the first day of the month and the total number of days in the month
     const firstDay = (new Date(year, month).getDay() + 6) % 7;
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    // Create the table for the calendar
     const calendarTable = document.createElement("table");
     const headerRow = document.createElement("tr");
-
-    // Days of the week header
     const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
     dayNames.forEach(dayName => {
         const th = document.createElement("th");
         th.innerText = dayName;
@@ -35,52 +30,53 @@ function createCalendarGrid(year, month) {
     calendarTable.appendChild(headerRow);
 
     let day = 1;
-    for (let i = 0; i < 6; i++) { // Maximum of 6 rows
+    for (let i = 0; i < 6; i++) {
         const row = document.createElement("tr");
-
         for (let j = 0; j < 7; j++) {
             const cell = document.createElement("td");
             if (i === 0 && j < firstDay) {
-                // Empty cells before the start of the month
                 cell.innerText = '';
             } else if (day <= daysInMonth) {
                 cell.innerText = day;
-                
-                // Check if there is a commemorative day for the given date
-                const date = `${monthNames[month]} ${day}, ${year}`;
-                const dayData = daysData.filter(d => 
-                    d.monthName === monthNames[month] && 
-                    d.occurence === 'second' && 
-                    d.dayName === dayNames[j]
-                );
-                dayData.forEach(d => {
-                    const dayText = d.name;
-                    const tooltip = document.createElement("span");
-                    tooltip.classList.add("tooltip");
-                    tooltip.innerText = dayText;
-                    cell.appendChild(tooltip);
+
+                // Highlight & interact with special days
+                daysData.forEach(d => {
+                    if (d.monthName === monthNames[month]) {
+                        const specialDayDate = calculateSpecialDay(year, month, d);
+                        if (specialDayDate === day) {
+                            cell.style.backgroundColor = "#FFD700";
+                            cell.style.fontWeight = "bold";
+                            cell.style.color = "black";
+                            cell.style.padding = "10px";
+
+                            const dayName = document.createElement("div");
+                            dayName.style.fontSize = "12px";
+                            dayName.style.marginTop = "5px";
+                            dayName.style.textAlign = "center";
+                            dayName.innerText = d.name;
+                            cell.appendChild(dayName);
+
+                            cell.addEventListener("click", () => fetchSpecialDayDescription(d.descriptionURL, d.name));
+                        }
+                    }
                 });
 
                 day++;
             }
             row.appendChild(cell);
         }
-
         calendarTable.appendChild(row);
-        if (day > daysInMonth) break; // Stop after all the days are added
+        if (day > daysInMonth) break;
     }
 
-    // Append the table to the body
-    document.querySelector('#calendar').innerHTML = ''; // Clear previous grid
+    document.querySelector('#calendar').innerHTML = '';
     document.querySelector('#calendar').appendChild(calendarTable);
 }
 
-// Update the month and year in the header
 function updateCalendarHeader(year, month) {
     document.querySelector('#month-year').innerText = `${monthNames[month]} ${year}`;
 }
 
-// Function to handle "Previous Month" button click
 function prevMonth() {
     if (currentMonth === 0) {
         currentMonth = 11;
@@ -88,11 +84,9 @@ function prevMonth() {
     } else {
         currentMonth--;
     }
-    createCalendarGrid(currentYear, currentMonth);
-    updateCalendarHeader(currentYear, currentMonth);
+    updateCalendar();
 }
 
-// Function to handle "Next Month" button click
 function nextMonth() {
     if (currentMonth === 11) {
         currentMonth = 0;
@@ -100,16 +94,54 @@ function nextMonth() {
     } else {
         currentMonth++;
     }
-    createCalendarGrid(currentYear, currentMonth);
-    updateCalendarHeader(currentYear, currentMonth);
+    updateCalendar();
 }
 
-// Initial setup
+function updateCalendar() {
+    createCalendarGrid(currentYear, currentMonth);
+    updateCalendarHeader(currentYear, currentMonth);
+    document.querySelector("#monthSelector").value = currentMonth;
+    document.querySelector("#yearSelector").value = currentYear;
+    document.querySelector("#description-box").style.display = "none";
+}
+
+async function fetchSpecialDayDescription(url, dayName) {
+    try {
+        const response = await fetch(url);
+        const text = await response.text();
+        document.querySelector("#description-box").style.display = "block";
+        document.querySelector("#description-title").innerText = dayName;
+        document.querySelector("#description-text").innerText = text;
+    } catch (error) {
+        console.error("Error fetching description:", error);
+    }
+}
+
+function populateMonthYearSelectors() {
+    const monthSelector = document.querySelector("#monthSelector");
+    const yearSelector = document.querySelector("#yearSelector");
+
+    monthSelector.innerHTML = monthNames.map((m, i) => `<option value="${i}">${m}</option>`).join('');
+    yearSelector.innerHTML = Array.from({ length: 201 }, (_, i) => `<option value="${1900 + i}">${1900 + i}</option>`).join('');
+
+    monthSelector.value = currentMonth;
+    yearSelector.value = currentYear;
+
+    monthSelector.addEventListener("change", (e) => {
+        currentMonth = parseInt(e.target.value);
+        updateCalendar();
+    });
+
+    yearSelector.addEventListener("change", (e) => {
+        currentYear = parseInt(e.target.value);
+        updateCalendar();
+    });
+}
+
 window.onload = function () {
     createCalendarGrid(currentYear, currentMonth);
     updateCalendarHeader(currentYear, currentMonth);
-
-    // Attach event listeners to the buttons
     document.querySelector('#prevMonth').addEventListener('click', prevMonth);
     document.querySelector('#nextMonth').addEventListener('click', nextMonth);
+    populateMonthYearSelectors();
 };

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Days Calendar</title>
-    <script type="module" src="common.mjs"></script>
-    <script type="module" src="web.mjs"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Days Calendar</title>
+  <script type="module" src="web.mjs"></script>
 </head>
-
 <body>
-    <h1>Days Calendar</h1>
-    <div id="month-year"></div>
-    <div id="calendar"></div>
+  <h1>Days Calendar</h1>
+  <div id="month-year"></div>
 
-    <button id="prevMonth">Previous Month</button>
-    <button id="nextMonth">Next Month</button>
+  <label for="monthSelector">Select Month:</label>
+  <select id="monthSelector"></select>
+
+  <label for="yearSelector">Select Year:</label>
+  <select id="yearSelector"></select>
+
+  <div id="calendar"></div>
+
+  <button id="prevMonth">Previous Month</button>
+  <button id="nextMonth">Next Month</button>
+
+  <div id="description-box" style="border: 1px solid #ddd; padding: 10px; margin-top: 10px; display: none;">
+    <h3 id="description-title"></h3>
+    <p id="description-text"></p>
+  </div>
 </body>
-
 </html>
