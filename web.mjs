@@ -14,13 +14,16 @@ let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 
 function createCalendarGrid(year, month) {
+    document.querySelector('#calendar').innerHTML = '';
+
     const firstDay = (new Date(year, month).getDay() + 6) % 7;
+
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
     const calendarTable = document.createElement("table");
     const headerRow = document.createElement("tr");
     const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-
+    
     dayNames.forEach(dayName => {
         const th = document.createElement("th");
         th.innerText = dayName;
@@ -38,7 +41,13 @@ function createCalendarGrid(year, month) {
                 cell.innerText = '';
             } else if (day <= daysInMonth) {
                 cell.innerText = day;
-
+                const today = new Date();
+                if (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day) {
+                    cell.style.backgroundColor = "#FFD700";
+                    cell.style.fontWeight = "bold";
+                    cell.style.color = "black";
+                    cell.style.padding = "10px";
+                }
                 // Highlight & interact with special days
                 daysData.forEach(d => {
                     if (d.monthName === monthNames[month]) {
@@ -56,7 +65,10 @@ function createCalendarGrid(year, month) {
                             dayName.innerText = d.name;
                             cell.appendChild(dayName);
 
-                            cell.addEventListener("click", () => fetchSpecialDayDescription(d.descriptionURL, d.name));
+                            cell.addEventListener("click", () =>{
+                                fetchSpecialDayDescription(d.descriptionURL, d.name);
+                               
+                            } );
                         }
                     }
                 });
@@ -69,13 +81,15 @@ function createCalendarGrid(year, month) {
         if (day > daysInMonth) break;
     }
 
-    document.querySelector('#calendar').innerHTML = '';
+    // document.querySelector('#calendar').innerHTML = '';
     document.querySelector('#calendar').appendChild(calendarTable);
+    document.querySelector("#close-description").addEventListener("click", () => {
+        document.querySelector("#description-box").style.display = "none";
+      });
+      
 }
 
-function updateCalendarHeader(year, month) {
-    document.querySelector('#month-year').innerText = `${monthNames[month]} ${year}`;
-}
+
 
 function prevMonth() {
     if (currentMonth === 0) {
@@ -99,7 +113,6 @@ function nextMonth() {
 
 function updateCalendar() {
     createCalendarGrid(currentYear, currentMonth);
-    updateCalendarHeader(currentYear, currentMonth);
     document.querySelector("#monthSelector").value = currentMonth;
     document.querySelector("#yearSelector").value = currentYear;
     document.querySelector("#description-box").style.display = "none";
@@ -117,16 +130,27 @@ async function fetchSpecialDayDescription(url, dayName) {
     }
 }
 
+  
 function populateMonthYearSelectors() {
     const monthSelector = document.querySelector("#monthSelector");
     const yearSelector = document.querySelector("#yearSelector");
 
-    monthSelector.innerHTML = monthNames.map((m, i) => `<option value="${i}">${m}</option>`).join('');
-    yearSelector.innerHTML = Array.from({ length: 201 }, (_, i) => `<option value="${1900 + i}">${1900 + i}</option>`).join('');
-
-    monthSelector.value = currentMonth;
-    yearSelector.value = currentYear;
-
+    
+  
+  const monthNames = [...Array(12)].map((_, i) => new Date(0, i).toLocaleString("default", { month: "long" }));
+  monthNames.forEach((m, i) => {
+    const opt = document.createElement("option");
+    opt.value = i;
+    opt.textContent = m;
+    monthSelector.appendChild(opt);
+  });
+  
+  for (let y = 1900; y <= 2050; y++) {
+    const opt = document.createElement("option");
+    opt.value = y;
+    opt.textContent = y;
+    yearSelector.appendChild(opt);
+  }
     monthSelector.addEventListener("change", (e) => {
         currentMonth = parseInt(e.target.value);
         updateCalendar();
@@ -136,12 +160,13 @@ function populateMonthYearSelectors() {
         currentYear = parseInt(e.target.value);
         updateCalendar();
     });
+    monthSelector.value = currentMonth;
+yearSelector.value = currentYear;
 }
 
 window.onload = function () {
     createCalendarGrid(currentYear, currentMonth);
-    updateCalendarHeader(currentYear, currentMonth);
+    populateMonthYearSelectors();
     document.querySelector('#prevMonth').addEventListener('click', prevMonth);
     document.querySelector('#nextMonth').addEventListener('click', nextMonth);
-    populateMonthYearSelectors();
 };

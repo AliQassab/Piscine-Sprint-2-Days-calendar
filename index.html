@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Days Calendar</title>
     <script type="module" src="common.mjs"></script>
     <script type="module" src="web.mjs"></script>
-</head>
-
-<body>
+  </head>
+  <style>
+    
+    #description-box {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      border: 1px solid #aaa;
+      padding: 20px;
+      display: none;
+      max-width: 400px;
+      z-index: 1000;
+    }
+  </style>
+  <body>
     <h1>Days Calendar</h1>
-    <div id="month-year"></div>
+    <div id="month-year">
+        <button id="prevMonth">Previous Month</button>
+        <select id="monthSelector"></select>
+        <select id="yearSelector"></select>
+        <button id="nextMonth">Next Month</button>
+    </div>
     <div id="calendar"></div>
 
-    <button id="prevMonth">Previous Month</button>
-    <button id="nextMonth">Next Month</button>
-</body>
-
+    
+    <div id="description-box" style="display: none">
+        <button id="close-description" style="float: right; border: none; background: transparent; font-size: 20px; cursor: pointer;">&times;</button>
+        <h3 id="description-title"></h3>
+        <p id="description-text"></p>
+      </div>
+      
+    </div>
+  </body>
 </html>
