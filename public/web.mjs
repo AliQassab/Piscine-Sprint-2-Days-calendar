@@ -1,12 +1,12 @@
-import { currentMonth, currentYear } from "./config.mjs";
-import { createCalendarGrid } from "./calendar/calendarRenderer.mjs";
+import { currentMonth, currentYear } from "../src/config.mjs";
+import { createCalendarGrid } from "../src/calendar/calendarRenderer.mjs";
 
-import { populateMonthYearSelectors } from "./ui/dropdowns.mjs";
+import { populateMonthYearSelectors } from "../src/ui/dropdowns.mjs";
 import {
   updateCalendar,
   prevMonth,
   nextMonth,
-} from "./calendar/navigation.mjs";
+} from "../src/calendar/navigation.mjs";
 
 window.onload = function () {
   createCalendarGrid(currentYear, currentMonth);
