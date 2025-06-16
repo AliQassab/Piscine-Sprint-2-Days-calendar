@@ -4,11 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Days Calendar</title>
-    <script type="module" src="common.mjs"></script>
+    <!-- <script type="module" src="common.mjs"></script> -->
     <script type="module" src="web.mjs"></script>
   </head>
   <style>
-    
+    .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-grid div {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+  min-height: 50px;
+}
+
+.calendar-grid .day-name {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+.calendar-grid .today {
+  border: 2px solid red;
+  border-radius: 6px;
+  background-color: #fffacd;
+}
+
     #description-box {
       position: fixed;
       top: 20%;
