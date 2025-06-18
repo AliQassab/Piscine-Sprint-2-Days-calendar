@@ -32,3 +32,7 @@ export function calculateSpecialDay(year, specialDay) {
   const orderMap = { first: 0, second: 1, third: 2, fourth: 3 };
   return matchingDates[orderMap[occurence]] ?? null;
 }
+
+export function getGreeting() {
+  return "Hello";
+}

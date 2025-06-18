@@ -1,0 +1,11 @@
+{
+  "name": "piscine-sprint-2-days-calendar",
+  "description": "calendar app that shows commemorative days which occur annually, but not on a fixed date.",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}

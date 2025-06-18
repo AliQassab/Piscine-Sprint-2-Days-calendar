@@ -1,7 +1,7 @@
 import { currentMonth, currentYear } from "./config.mjs";
-import { createCalendarGrid } from "./calendar/calendarRenderer.mjs";
-
 import { populateMonthYearSelectors } from "./ui/dropdowns.mjs";
+
+import { createCalendarGrid } from "./calendar/calendarRenderer.mjs";
 import {
   updateCalendar,
   prevMonth,
