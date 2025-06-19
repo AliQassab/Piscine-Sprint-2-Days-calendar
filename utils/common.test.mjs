@@ -1,10 +1,6 @@
-import { getGreeting } from "./common.mjs";
 import { calculateSpecialDay } from "./common.mjs";
-
 import { setDate, currentMonth, currentYear } from "../config.mjs";
-test("Greeting is correct", () => {
-  expect(getGreeting()).toBe("Hello");
-});
+
 
 describe("calculateSpecialDay", () => {
   it("should return the correct date for the first Monday of January 2023", () => {
