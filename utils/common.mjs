@@ -4,60 +4,10 @@
 
 // Calculates the day number of a special weekday occurrence in a specific month and year
 
-// export function calculateSpecialDay(year, month, specialDay) {
-//   // Extract the target weekday and which occurrence (e.g., third Thursday)
-//   const { dayName, occurence } = specialDay;
 
-//   // Convert day name (e.g., "Thursday") to index (0 = Sunday, 6 = Saturday)
-//   const targetDayIndex = [
-//     "Sunday",
-//     "Monday",
-//     "Tuesday",
-//     "Wednesday",
-//     "Thursday",
-//     "Friday",
-//     "Saturday",
-//   ].indexOf(dayName);
 
-//   const firstOfMonth = new Date(year, month, 1);
-
-//   const firstWeekday = firstOfMonth.getDay();
-
-//   // Calculate how many days to skip from the 1st to reach the first occurrence of the target day
-//   const offset = (targetDayIndex - firstWeekday + 7) % 7;
-
-//   // Initial day is the first occurrence of the target weekday in the month
-//   let day = 1 + offset;
-
-//   // Adjust the day based on the specified occurrence
-//   switch (occurence) {
-//     case "second":
-//       day += 7;
-//       break;
-//     case "third":
-//       day += 14;
-//       break;
-//     case "fourth":
-//       day += 21;
-//       break;
-//     case "last":
-//       // For "last", find the last day of the month
-//       const lastOfMonth = new Date(year, month + 1, 0);
-//       const lastWeekday = lastOfMonth.getDay();
-
-//       // Calculate how far back the last occurrence of the target weekday is from the last day
-//       const diff = (lastWeekday - targetDayIndex + 7) % 7;
-
-//       // Subtract the difference from the last day to get the correct date
-//       day = lastOfMonth.getDate() - diff;
-//       break;
-//   }
-
-//   return day;
-// }
-// Finds the day number (e.g. 19) for a specific weekday in a month
-// Example: "third Thursday" of June 2025 → 19
 export function calculateSpecialDay(year, monthIndex, { dayName, occurence }) {
+
   const weekdays = [
     "Sunday",
     "Monday",
@@ -89,8 +39,4 @@ export function calculateSpecialDay(year, monthIndex, { dayName, occurence }) {
   }
 
   return 1 + daysToAdd;
-}
-
-export function getGreeting() {
-  return "Hello";
 }
