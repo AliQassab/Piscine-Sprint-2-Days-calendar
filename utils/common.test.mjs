@@ -1,7 +1,6 @@
 import { calculateSpecialDay } from "./common.mjs";
 import { setDate, currentMonth, currentYear } from "../config.mjs";
 
-
 describe("calculateSpecialDay", () => {
   it("should return the correct date for the first Monday of January 2023", () => {
     const specialDay = {
@@ -9,7 +8,7 @@ describe("calculateSpecialDay", () => {
       dayName: "Monday",
       occurence: "first",
     };
-    expect(calculateSpecialDay(2023, specialDay)).toBe(2);
+    expect(calculateSpecialDay(2023, 0, specialDay)).toBe(2);
   });
 
   it("should return the correct date for the second Friday of February 2023", () => {
@@ -18,7 +17,7 @@ describe("calculateSpecialDay", () => {
       dayName: "Friday",
       occurence: "second",
     };
-    expect(calculateSpecialDay(2023, specialDay)).toBe(10);
+    expect(calculateSpecialDay(2023, 1, specialDay)).toBe(10);
   });
 
   it("should return null for an invalid occurrence", () => {
@@ -27,7 +26,7 @@ describe("calculateSpecialDay", () => {
       dayName: "Wednesday",
       occurence: "fifth",
     };
-    expect(calculateSpecialDay(2023, specialDay)).toBeNull();
+    expect(calculateSpecialDay(2023, 3, specialDay)).toBeNull();
   });
 });
 
