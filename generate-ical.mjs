@@ -1,7 +1,7 @@
 import { calculateSpecialDay } from "./utils/common.mjs";
 import daysData from './data/days.json' with { type: 'json' };
 import fs from "fs";
-function generateICS() {
+async function generateICS() {
   let ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "CALSCALE:GREGORIAN"];
   for (let year = 2020; year <= 2030; year++) {
     for (const { monthName, name, descriptionURL, ...dayInfo } of daysData) {
@@ -13,12 +13,14 @@ function generateICS() {
       const dateStr = `${dateObj.getFullYear()}${pad(
         dateObj.getMonth() + 1
       )}${pad(dateObj.getDate())}`;
+      const response = await fetch(descriptionURL);
+      const text = await response.text();
       ics.push(
         "BEGIN:VEVENT",
         `SUMMARY:${name}`,
         `DTSTART;VALUE=DATE:${dateStr}`,
         `DTEND;VALUE=DATE:${dateStr}`,
-        `DESCRIPTION:See ${descriptionURL}`,
+        `DESCRIPTION:${text}`,
         "END:VEVENT"
       );
     }
