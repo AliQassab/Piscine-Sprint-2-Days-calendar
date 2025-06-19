@@ -1,10 +1,6 @@
 // Function to calculate the correct date for a special day based on its occurrence pattern
-
 // Calculate the date of a specific weekday occurrence in a given month and year.
-
 // Calculates the day number of a special weekday occurrence in a specific month and year
-
-
 
 export function calculateSpecialDay(year, monthIndex, { dayName, occurence }) {
 
