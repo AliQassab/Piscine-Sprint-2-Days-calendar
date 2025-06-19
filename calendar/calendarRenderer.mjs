@@ -3,6 +3,75 @@ import daysData from "../data/days.json" with { type: "json" };
 import { calculateSpecialDay } from "../utils/common.mjs";
 import { fetchSpecialDayDescription } from "../ui/descriptionService.mjs";
 
+// export function createCalendarGrid(year, month) {
+//   const calendar = document.querySelector("#calendar");
+//   calendar.innerHTML = "";
+
+//   const grid = document.createElement("div");
+//   grid.className = "calendar-grid";
+
+//   // Calculate the first day of the month (adjusted to start from Monday)
+//   const firstDay = (new Date(year, month).getDay() + 6) % 7;
+
+//   // Get the number of days in the selected month
+//   const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+//   // Add the day names to the top of the grid
+//   const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+//   dayNames.forEach(day => {
+//     const dayEl = document.createElement("div");
+//     dayEl.className = "day-name";
+//     dayEl.innerText = day;
+//     grid.appendChild(dayEl);
+//   });
+
+//   // Add empty cells for days before the first of the month (padding)
+//   for (let i = 0; i < firstDay; i++) {
+//     grid.appendChild(document.createElement("div"));
+//   }
+
+//   // Loop through each day of the month and create a grid cell
+//   for (let day = 1; day <= daysInMonth; day++) {
+//     const cell = document.createElement("div");
+//     cell.innerText = day;
+
+//     // Highlight the current date (today)
+//     const today = new Date();
+//     if (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day) {
+//       cell.classList.add("today");
+//     }
+
+//     // Check if this day matches any special days from the JSON data
+//     daysData.forEach(d => {
+//       if (d.monthName === monthNames[month]) {
+//         const specialDayDate = calculateSpecialDay(year, d)[0]?.date;
+//         if (specialDayDate === day) {
+//           cell.style.backgroundColor = "#FFD700";
+//           cell.style.fontWeight = "bold";
+//           cell.style.color = "black";
+//           cell.style.padding = "10px";
+
+//           // Add the name of the special day underneath the date
+//           const dayName = document.createElement("div");
+//           dayName.style.fontSize = "12px";
+//           dayName.style.marginTop = "5px";
+//           dayName.style.textAlign = "center";
+//           dayName.innerText = d.name;
+//           cell.appendChild(dayName);
+
+//           // Add click event to show the special day description
+//           cell.addEventListener("click", () => {
+//             fetchSpecialDayDescription(d.descriptionURL, d.name);
+//           });
+//         }
+//       }
+//     });
+
+//     grid.appendChild(cell);
+//   }
+
+//   calendar.appendChild(grid);
+// }
 export function createCalendarGrid(year, month) {
   const calendar = document.querySelector("#calendar");
   calendar.innerHTML = "";
@@ -10,13 +79,7 @@ export function createCalendarGrid(year, month) {
   const grid = document.createElement("div");
   grid.className = "calendar-grid";
 
-  // Calculate the first day of the month (adjusted to start from Monday)
-  const firstDay = (new Date(year, month).getDay() + 6) % 7;
-
-  // Get the number of days in the selected month
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-  // Add the day names to the top of the grid
+  // Add weekday headers
   const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   dayNames.forEach(day => {
     const dayEl = document.createElement("div");
@@ -25,33 +88,40 @@ export function createCalendarGrid(year, month) {
     grid.appendChild(dayEl);
   });
 
-  // Add empty cells for days before the first of the month (padding)
+  // Get first day of month adjusted to Monday (0 for Monday, 6 for Sunday)
+  const firstDay = (new Date(year, month).getDay() + 6) % 7;
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  // Add padding before day 1
   for (let i = 0; i < firstDay; i++) {
     grid.appendChild(document.createElement("div"));
   }
 
-  // Loop through each day of the month and create a grid cell
+  // Create day cells
   for (let day = 1; day <= daysInMonth; day++) {
     const cell = document.createElement("div");
     cell.innerText = day;
 
-    // Highlight the current date (today)
+    // Highlight today
     const today = new Date();
-    if (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day) {
+    if (
+      today.getFullYear() === year &&
+      today.getMonth() === month &&
+      today.getDate() === day
+    ) {
       cell.classList.add("today");
     }
 
-    // Check if this day matches any special days from the JSON data
+    // Check if this day is a special day
     daysData.forEach(d => {
       if (d.monthName === monthNames[month]) {
-        const specialDayDate = calculateSpecialDay(year, d);
+        const specialDayDate = calculateSpecialDay(year, month, d);
         if (specialDayDate === day) {
           cell.style.backgroundColor = "#FFD700";
           cell.style.fontWeight = "bold";
           cell.style.color = "black";
           cell.style.padding = "10px";
 
-          // Add the name of the special day underneath the date
           const dayName = document.createElement("div");
           dayName.style.fontSize = "12px";
           dayName.style.marginTop = "5px";
@@ -59,10 +129,9 @@ export function createCalendarGrid(year, month) {
           dayName.innerText = d.name;
           cell.appendChild(dayName);
 
-          // Add click event to show the special day description
-          cell.addEventListener("click", () => {
-            fetchSpecialDayDescription(d.descriptionURL, d.name);
-          });
+          cell.addEventListener("click", () =>
+            fetchSpecialDayDescription(d.descriptionURL, d.name)
+          );
         }
       }
     });
