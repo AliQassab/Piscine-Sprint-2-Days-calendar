@@ -57,7 +57,7 @@
 // }
 // Finds the day number (e.g. 19) for a specific weekday in a month
 // Example: "third Thursday" of June 2025 → 19
-export function calculateSpecialDay(year, month, { dayName, occurence }) {
+export function calculateSpecialDay(year, monthIndex, { dayName, occurence }) {
   const weekdays = [
     "Sunday",
     "Monday",
@@ -70,7 +70,7 @@ export function calculateSpecialDay(year, month, { dayName, occurence }) {
   const targetDay = weekdays.indexOf(dayName); // 0-6 (Sun-Sat)
 
   // Find first day of month (e.g. June 1st, 2025)
-  const firstDay = new Date(year, month, 1).getDay(); // 0-6 (Sun-Sat)
+  const firstDay = new Date(year, monthIndex, 1).getDay(); // 0-6 (Sun-Sat)
 
   // Days to add to reach first target weekday
   let daysToAdd = (targetDay - firstDay + 7) % 7;
@@ -80,9 +80,12 @@ export function calculateSpecialDay(year, month, { dayName, occurence }) {
   else if (occurence === "third") daysToAdd += 14;
   else if (occurence === "fourth") daysToAdd += 21;
   else if (occurence === "last") {
-    const lastDay = new Date(year, month + 1, 0); // Last day of month
+    const lastDay = new Date(year, monthIndex + 1, 0); // Last day of month
     const daysBack = (lastDay.getDay() - targetDay + 7) % 7;
     return lastDay.getDate() - daysBack;
+  } else if (occurence !== "first") {
+    // invalid occurrence
+    return null;
   }
 
   return 1 + daysToAdd;
