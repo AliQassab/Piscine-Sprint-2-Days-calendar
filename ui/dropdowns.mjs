@@ -11,7 +11,7 @@ export function populateMonthYearSelectors(updateCalendar) {
   });
 
   // Populate the year dropdown with a range from 1900 to 2050
-  for (let y = 1900; y <= 2050; y++) {
+  for (let y = 1900; y <= 2100; y++) {
     yearSelector.appendChild(new Option(y, y));
   }
 

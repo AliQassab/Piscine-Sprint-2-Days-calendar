@@ -3,7 +3,6 @@ import daysData from "../data/days.json" with { type: "json" };
 import { calculateSpecialDay } from "../utils/common.mjs";
 import { fetchSpecialDayDescription } from "../ui/descriptionService.mjs";
 
-
 export function createCalendarGrid(year, month) {
   const calendar = document.querySelector("#calendar");
   calendar.innerHTML = "";
