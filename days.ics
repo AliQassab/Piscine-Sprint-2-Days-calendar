@@ -3,332 +3,343 @@ VERSION:2.0
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20201012
-DTEND;VALUE=DATE:20201012
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20201013
+DTEND;VALUE=DATE:20201013
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20200508
-DTEND;VALUE=DATE:20200508
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20200509
+DTEND;VALUE=DATE:20200509
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20200904
-DTEND;VALUE=DATE:20200904
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20200905
+DTEND;VALUE=DATE:20200905
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20200918
-DTEND;VALUE=DATE:20200918
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20200919
+DTEND;VALUE=DATE:20200919
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
 DTSTART;VALUE=DATE:20201030
 DTEND;VALUE=DATE:20201030
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20211011
-DTEND;VALUE=DATE:20211011
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20211012
+DTEND;VALUE=DATE:20211012
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20210507
-DTEND;VALUE=DATE:20210507
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20210508
+DTEND;VALUE=DATE:20210508
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20210903
-DTEND;VALUE=DATE:20210903
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20210904
+DTEND;VALUE=DATE:20210904
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20210917
-DTEND;VALUE=DATE:20210917
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20210918
+DTEND;VALUE=DATE:20210918
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
-DTSTART;VALUE=DATE:20211028
-DTEND;VALUE=DATE:20211028
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DTSTART;VALUE=DATE:20211029
+DTEND;VALUE=DATE:20211029
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20221010
-DTEND;VALUE=DATE:20221010
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20221011
+DTEND;VALUE=DATE:20221011
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20220513
-DTEND;VALUE=DATE:20220513
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20220514
+DTEND;VALUE=DATE:20220514
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20220902
-DTEND;VALUE=DATE:20220902
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20220903
+DTEND;VALUE=DATE:20220903
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20220916
-DTEND;VALUE=DATE:20220916
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20220917
+DTEND;VALUE=DATE:20220917
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
-DTSTART;VALUE=DATE:20221027
-DTEND;VALUE=DATE:20221027
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DTSTART;VALUE=DATE:20221028
+DTEND;VALUE=DATE:20221028
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20231009
-DTEND;VALUE=DATE:20231009
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20231010
+DTEND;VALUE=DATE:20231010
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20230512
-DTEND;VALUE=DATE:20230512
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20230513
+DTEND;VALUE=DATE:20230513
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20230901
-DTEND;VALUE=DATE:20230901
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20230902
+DTEND;VALUE=DATE:20230902
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20230915
-DTEND;VALUE=DATE:20230915
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20230916
+DTEND;VALUE=DATE:20230916
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
-DTSTART;VALUE=DATE:20231026
-DTEND;VALUE=DATE:20231026
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DTSTART;VALUE=DATE:20231027
+DTEND;VALUE=DATE:20231027
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20241007
-DTEND;VALUE=DATE:20241007
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20241008
+DTEND;VALUE=DATE:20241008
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20240510
-DTEND;VALUE=DATE:20240510
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20240511
+DTEND;VALUE=DATE:20240511
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20240906
-DTEND;VALUE=DATE:20240906
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20240907
+DTEND;VALUE=DATE:20240907
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20240920
-DTEND;VALUE=DATE:20240920
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20240921
+DTEND;VALUE=DATE:20240921
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
-DTSTART;VALUE=DATE:20241024
-DTEND;VALUE=DATE:20241024
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DTSTART;VALUE=DATE:20241025
+DTEND;VALUE=DATE:20241025
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20251013
-DTEND;VALUE=DATE:20251013
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20251014
+DTEND;VALUE=DATE:20251014
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20250509
-DTEND;VALUE=DATE:20250509
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20250510
+DTEND;VALUE=DATE:20250510
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20250905
-DTEND;VALUE=DATE:20250905
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20250906
+DTEND;VALUE=DATE:20250906
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20250919
-DTEND;VALUE=DATE:20250919
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20250920
+DTEND;VALUE=DATE:20250920
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
 DTSTART;VALUE=DATE:20251031
 DTEND;VALUE=DATE:20251031
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261012
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261013
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20260508
-DTEND;VALUE=DATE:20260508
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260509
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20260904
-DTEND;VALUE=DATE:20260904
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260905
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20260918
-DTEND;VALUE=DATE:20260918
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260919
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261030
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20271011
-DTEND;VALUE=DATE:20271011
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20271012
+DTEND;VALUE=DATE:20271012
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20270507
-DTEND;VALUE=DATE:20270507
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20270508
+DTEND;VALUE=DATE:20270508
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20270903
-DTEND;VALUE=DATE:20270903
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20270904
+DTEND;VALUE=DATE:20270904
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20270917
-DTEND;VALUE=DATE:20270917
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20270918
+DTEND;VALUE=DATE:20270918
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
-DTSTART;VALUE=DATE:20271028
-DTEND;VALUE=DATE:20271028
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DTSTART;VALUE=DATE:20271029
+DTEND;VALUE=DATE:20271029
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20281009
-DTEND;VALUE=DATE:20281009
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20281010
+DTEND;VALUE=DATE:20281010
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20280512
-DTEND;VALUE=DATE:20280512
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20280513
+DTEND;VALUE=DATE:20280513
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20280901
-DTEND;VALUE=DATE:20280901
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20280902
+DTEND;VALUE=DATE:20280902
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20280915
-DTEND;VALUE=DATE:20280915
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20280916
+DTEND;VALUE=DATE:20280916
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
-DTSTART;VALUE=DATE:20281026
-DTEND;VALUE=DATE:20281026
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DTSTART;VALUE=DATE:20281027
+DTEND;VALUE=DATE:20281027
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20291008
-DTEND;VALUE=DATE:20291008
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20291009
+DTEND;VALUE=DATE:20291009
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20290511
-DTEND;VALUE=DATE:20290511
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20290512
+DTEND;VALUE=DATE:20290512
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20290831
-DTEND;VALUE=DATE:20290831
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20290901
+DTEND;VALUE=DATE:20290901
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20290914
-DTEND;VALUE=DATE:20290914
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20290915
+DTEND;VALUE=DATE:20290915
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
-DTSTART;VALUE=DATE:20291025
-DTEND;VALUE=DATE:20291025
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DTSTART;VALUE=DATE:20291026
+DTEND;VALUE=DATE:20291026
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ada Lovelace Day
-DTSTART;VALUE=DATE:20301007
-DTEND;VALUE=DATE:20301007
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/ada.txt
+DTSTART;VALUE=DATE:20301008
+DTEND;VALUE=DATE:20301008
+DESCRIPTION:Ada Lovelace was a mathematician who made contributions to the field of computing in its very early days. On Ada Lovelace Day we celebrate and raise awareness of the contributions of women to STEM fields.
+
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Binturong Day
-DTSTART;VALUE=DATE:20300510
-DTEND;VALUE=DATE:20300510
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/binturongs.txt
+DTSTART;VALUE=DATE:20300511
+DTEND;VALUE=DATE:20300511
+DESCRIPTION:Binturongs are really cute, and smell of popcorn.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Vulture Awareness Day
-DTSTART;VALUE=DATE:20300906
-DTEND;VALUE=DATE:20300906
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/vultures.txt
+DTSTART;VALUE=DATE:20300907
+DTEND;VALUE=DATE:20300907
+DESCRIPTION:Vultures are a much maligned species. They provide vital services to the ecosystem, and without them the world would be a much worse place.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:International Red Panda Day
-DTSTART;VALUE=DATE:20300920
-DTEND;VALUE=DATE:20300920
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/red-pandas.txt
+DTSTART;VALUE=DATE:20300921
+DTEND;VALUE=DATE:20300921
+DESCRIPTION:Red pandas are an endangered species. They happen to be really cute, but that's not the only reason we should help them to thrive!
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:World Lemur Day
-DTSTART;VALUE=DATE:20301024
-DTEND;VALUE=DATE:20301024
-DESCRIPTION:See https://codeyourfuture.github.io/The-Piscine/days/lemurs.txt
+DTSTART;VALUE=DATE:20301025
+DTEND;VALUE=DATE:20301025
+DESCRIPTION:Lemurs are excellent. Did you know that the most likely scientific theory as to how they got to Madagascar is that they rafted there from mainland Africa?
 END:VEVENT
 END:VCALENDAR
